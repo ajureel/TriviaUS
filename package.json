@@ -1,0 +1,26 @@
+{
+  "name": "triviaus",
+  "version": "1.0.0",
+  "description": "Bootcamp Group Project #2: We decided to build a trivia game that could be packaged and monitized.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajureel/TriviaUS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajureel/TriviaUS/issues"
+  },
+  "homepage": "https://github.com/ajureel/TriviaUS#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "handlebars": "^4.7.7",
+    "jest": "^27.5.1",
+    "mysql": "^2.18.1",
+    "stripe": "^8.207.0"
+  }
+}
