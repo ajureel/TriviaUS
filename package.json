@@ -17,10 +17,13 @@
   },
   "homepage": "https://github.com/ajureel/TriviaUS#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "handlebars": "^4.7.7",
     "jest": "^27.5.1",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0",
     "stripe": "^8.207.0"
   }
 }
