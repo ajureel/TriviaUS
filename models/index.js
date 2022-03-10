@@ -2,6 +2,7 @@ const Host = require('./host.js');
 const Room = require("./room.js");
 const Player = require('./player.js');
 const Room_Player = require('./room_player.js');
+const QoD = require('./qod.js');
 
 // create associations
 Host.hasMany(Room, {
@@ -40,4 +41,4 @@ Player.hasMany(Room_Player, {
   foreignKey: 'player_id'
 });
 
-module.exports = { Host, Room, Player, Room_Player };
+module.exports = { Host, Room, Player, Room_Player, QoD };
