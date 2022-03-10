@@ -4,7 +4,9 @@
   "description": "Bootcamp Group Project #2: We decided to build a trivia game that could be packaged and monitized.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
