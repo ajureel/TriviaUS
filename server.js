@@ -9,7 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // turn on routes
-//app.use(routes);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 // turn on connection to db and server
 sequelize.sync({ force: true }).then(() => {
