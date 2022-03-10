@@ -28,7 +28,7 @@ Room.init(
       expires: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: (DataTypes.NOW + 7200000) //2 hour * 60 minute * 60 second * 1000 millisecond
+        defaultValue: DataTypes.NOW  //2 hour * 60 minute * 60 second * 1000 millisecond
       },
       status: {
         type: DataTypes.STRING,

@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Room_Player extends Model {}
 
-Vote.init(
+Room_Player.init(
   {
     id: {
       type: DataTypes.INTEGER,
