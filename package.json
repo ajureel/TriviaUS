@@ -4,7 +4,9 @@
   "description": "Bootcamp Group Project #2: We decided to build a trivia game that could be packaged and monitized.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,13 +19,21 @@
   },
   "homepage": "https://github.com/ajureel/TriviaUS#readme",
   "dependencies": {
+    "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "jest": "^27.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "path": "^0.12.7",
     "sequelize": "^6.17.0",
+    "socket-io": "^1.0.0",
     "stripe": "^8.207.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
