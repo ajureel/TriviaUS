@@ -18,7 +18,7 @@ QoD.init(
         defaultValue: DataTypes.NOW  
       },
       question: {
-        type: DataTypes.BLOB,
+        type: DataTypes.JSON,
         allowNull: false,
       }
     },
