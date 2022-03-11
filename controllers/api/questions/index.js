@@ -1,10 +1,11 @@
 const router = require("express").Router();
 //const apiRoutes = require("./api");
-const questionRoutes = require("./questions");
+const qodRoutes = require("./qod-routes");
 
-console.log("api index");
 
-router.use('/q',questionRoutes);
+console.log("questions/index.js");
+
+router.use('/qod', qodRoutes);
 //router.use(require(apiRoutes));
 
 module.exports = router;
