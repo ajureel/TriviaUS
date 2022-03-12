@@ -31,10 +31,7 @@ Room.init(
       },
       room_code: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true
-        }
+        allowNull: false
       },
       expires: {
         type: DataTypes.DATE,
