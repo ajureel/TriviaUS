@@ -1,7 +1,7 @@
 const router = require("express").Router();
 //const apiRoutes = require("./api");
 const questionRoutes = require("./questions");
-const roomRoutes = require(".room-routes");
+const roomRoutes = require("./room-routes");
 
 console.log("api index");
 
