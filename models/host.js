@@ -35,8 +35,7 @@ Host.init(
           len: [4]
         }
       }
-      //Add plan info and payment info
-  },
+  }, 
   {
     sequelize,
     freezeTableName: true,
