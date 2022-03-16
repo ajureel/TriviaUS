@@ -3,7 +3,7 @@ const Room = require("./room.js");
 const Player = require('./player.js');
 const Room_Player = require('./room_player.js');
 const QoD = require('./qod.js');
-const Room_Question = require('./room_question.js');
+const Room_Question = require('./room-question');
 
 // create associations
 Host.hasMany(Room, {
@@ -42,7 +42,7 @@ Player.hasMany(Room_Player, {
   foreignKey: 'player_id'
 });
 
-Room.hasMany(this.Room_Question, {
+Room.hasMany(Room_Question, {
   foreignKey: 'room_id'
 });
 
