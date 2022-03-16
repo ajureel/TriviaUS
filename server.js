@@ -1,4 +1,5 @@
 const path = require("path");
+const fs   = require("fs");
 const express = require("express");
 const app = express();
 const routes = require("./controllers");
@@ -22,6 +23,9 @@ const sess = {
 
 app.use(session(sess));
 
+const publicPath = path.resolve(__dirname, "public"); 
+const htmlPath = path.join(publicPath, "index.html");
+
 const hbs = exphbs.create({});
 
 app.engine("handlebars", hbs.engine);
@@ -30,22 +34,23 @@ app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use(express.static('public'));
 
 // turn on routes
 app.use('/', routes);
 
 // // Route to Homepage
-app.get('/', (req, res) => {
+app.get('/public/index.html', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
   // res.render('main');
 });
 
 // GET/POST route for'login' 
-app.get('/public/login.html', (req, res) => {
+app.get('/public/login', (req, res) => {
   res.sendFile(__dirname + '/public/login.html');
 });
 
-app.post('/public/login.html', (req, res) => {
+app.post('/login', (req, res) => {
   //insert login here
   let username = req.body.username;
   let password = req.body.password;
