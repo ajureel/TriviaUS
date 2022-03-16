@@ -38,7 +38,7 @@ Room_Question.init(
         allowNull: false
       },
       incorrect_answers: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false
       }
     },

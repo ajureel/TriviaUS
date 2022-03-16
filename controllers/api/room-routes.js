@@ -64,6 +64,21 @@ const newRoomCode = (req) => {
 }
 
 // *********** GET ROUTE *************
+// http://localhost:3001/api/room/1/
+// EXAMPLE Returns:
+// {
+// 	"id": 1,
+// 	"title": "Totally Crazy Trivia Night",
+// 	"num_q": 5,
+// 	"time_q": 1,
+// 	"max_players": 10,
+// 	"room_code": "THRIZ1",
+// 	"expires": "2022-03-14T23:21:42.000Z",
+// 	"status": "OPEN",
+// 	"host_id": 1,
+// 	"createdAt": "2022-03-14T23:21:42.000Z",
+// 	"updatedAt": "2022-03-14T23:21:42.000Z"
+// }
 router.get('/:id', (req, res) => {
     // find a single room by its `id`
     Room.findOne({
