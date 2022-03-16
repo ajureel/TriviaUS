@@ -39,10 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 // turn on routes
 app.use('/', routes);
 
-// // Route to Homepage
-app.get('/public/index.html', (req, res) => {
+// Route to Homepage
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
-  // res.render('main');
 });
 
 // GET/POST route for'login' 
