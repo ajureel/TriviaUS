@@ -3,7 +3,6 @@ const sequelize = require('../config/connection');
 
 // create our Post model
 class Room extends Model {}
-  
 
 // create fields/columns for Post model
 Room.init(
@@ -18,17 +17,26 @@ Room.init(
         type: DataTypes.STRING,
         allowNull: false
       },
+      num_q: {
+        type: DataTypes.INTEGER,
+        defaultValue: 5
+      },
+      time_q: {
+        type: DataTypes.INTEGER,
+        defaultValue: 1
+      },
+      max_players: {
+        type: DataTypes.INTEGER,
+        defaultValue: 10
+      },
       room_code: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true
-        }
+        allowNull: false
       },
       expires: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: (DataTypes.NOW + 7200000) //2 hour * 60 minute * 60 second * 1000 millisecond
+        defaultValue: DataTypes.NOW  //2 hour * 60 minute * 60 second * 1000 millisecond
       },
       status: {
         type: DataTypes.STRING,
