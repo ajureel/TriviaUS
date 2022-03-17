@@ -2,8 +2,7 @@ const router = require("express").Router();
 const {QoD} = require('../../../models');
 const date = require('date-and-time'); //eables us to compare dates
 const fetch = require('node-fetch'); //enables us to fetch from 3rd party apis
-//I think we can delete this next line
-// const { res } = require("date-and-time"); 
+
 
 const today = new Date();
 
