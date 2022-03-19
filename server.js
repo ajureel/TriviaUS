@@ -13,22 +13,25 @@ app.use(express.urlencoded({ extended: true }));
 //app.use('/api', apiRoutes);
 app.use('/', routes);
 
-// Route to Homepage
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
+//app.use ('/', public);
+app.use(express.static('public'));
 
-// GET/POST route for'login' 
-app.get('/public/login.html', (req, res) => {
-  res.sendFile(__dirname + '/public/login.html');
-});
+// // Route to Homepage
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/public/index.html');
+// });
 
-app.post('/public/login.html', (req, res) => {
-  //insert login here
-  let username = req.body.username;
-  let password = req.body.password;
-  res.send(`Username: ${username} Password: ${password}`);
-});
+// // GET/POST route for'login' 
+// app.get('/public/login.html', (req, res) => {
+//   res.sendFile(__dirname + '/public/login.html');
+// });
+
+// app.post('/public/login.html', (req, res) => {
+//   //insert login here
+//   let username = req.body.username;
+//   let password = req.body.password;
+//   res.send(`Username: ${username} Password: ${password}`);
+// });
 
 
 // turn on connection to db and server

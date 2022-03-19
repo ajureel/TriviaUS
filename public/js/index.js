@@ -20,82 +20,32 @@ const myLoad = () =>{
     })
     .then(function(data) {
         questionTitle.innerText = data.question;
-
-        // for (var i = 0; i < data.length; i++) {
-        // var listItem = document.createElement('li');
-        // listItem.textContent = data[i].html_url;
-        // repoList.appendChild(listItem);
-        })
+        questionDiv.style = '';
+        var answers = data.incorrect_answers;
+        var myRdm = Math.floor(Math.random() * 4);
+        answers.splice(myRdm, 0, data.correct_answer);
+        console.log (answers);
+        var answerBts = [choiceA, choiceB, choiceC, choiceD];
+        for (var i = 0; i < 4; i++){
+            answerBts[i].innerText = answers[i];
+            if (answers[i] == data.correct_answer){
+                answerBts[i].setAttribute("isCorrect", "true");
+            } else {
+                answerBts[i].setAttribute("isCorrect", "false");
+            }
+        }
+    })
 };
 
 myLoad();
-/* <div id="questionDiv" style="display: none;">
-<p id="questionTitle"></p>
-<div class="buttons are-small column">
-    <p><button id="btn0" class="button is-primary"></button></p>
-    <p><button id="btn1" class="button is-primary"></button></p>
-    <p><button id="btn2" class="button is-primary"></button></p>
-    <p><button id="btn3" class="button is-primary"></button></p>
-    <hr id="lineBreak" style="display: none;">
-    <p id="answerCheck" style="display: none;"></p>
-</div>
-</div>
-{
-	"type": "multiple",
-	"category": "Animals",
-	"question": "The dish Fugu, is made from what family of fish?",
-	"difficulty": "medium",
-	"correct_answer": "Pufferfish",
-	"incorrect_answers": [
-		"Bass",
-		"Salmon",
-		"Mackerel"
-	]
-} */}
 
-//QoD submit
-const checkQoD = () => {
+//QoD click
+questionDiv.addEventListener("click", function () {
     //check anwer to 
-}
-
-// {
-// 	"type": "multiple",
-// 	"category": "Animals",
-// 	"question": "The dish Fugu, is made from what family of fish?",
-// 	"difficulty": "medium",
-// 	"correct_answer": "Pufferfish",
-// 	"incorrect_answers": [
-// 		"Bass",
-// 		"Salmon",
-// 		"Mackerel"
-// 	]
-// }
-
-
-// // Random Variables
-// var questionNum = 0;
-// var correctAns = 0;
-// var questionIndex = 0;
-// var scoreResult;
-// // End of Random Variables
-
-// // Connecting Elements
-// var timer = document.getElementById("timer");
-// var timeLeft = document.getElementById("timeLeft");
-// var timesUp = document.getElementById("timesUp");
-
-// var startDiv = document.getElementById("start");
-// var startQuizBtn = document.getElementById("start-quiz-button");
-
-// var questionDiv = document.getElementById("questionDiv");
-// var questionTitle = document.getElementById("questionTitle");
-// var choiceA = document.getElementById("btn0");
-// var choiceB = document.getElementById("btn1");
-// var choiceC = document.getElementById("btn2");
-// var choiceD = document.getElementById("btn3");
-// var answerCheck = document.getElementById("answerCheck");
-
-// var summary = document.getElementById("summary");
-// var submitInitialBtn = document.getElementById("submitInitialBtn");
-// var initialInput = document.getElementById("initialInput");
-// var everything = document.getElementById("everything"); 
+    //alert("here: " + event.target.innerText);
+    if (event.target.getAttribute("isCorrect") == "true"){
+        answerCheck.innerText = "You got it! " + event.target.innerText + " is correct!";
+    } else {
+        answerCheck.innerText = "Try again!";
+    }
+});
