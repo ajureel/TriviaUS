@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Cool Coding Quiz</title>
+    <title>Trivia Us!</title>
 
     <!-- links to Bulma CSS Framework and CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -15,27 +15,25 @@
 
 <body class="hero is-fullheight">
     <!-- main content section -->
-    <section class="container is-fluid">
+    <section class="container">
 
-        <!-- Timer and Highscore link-->
-        <div class="hero-head level">
+        <!-- sign in/sign up link-->
+        <div class="hero-head level-right">
             <div>
-                <a class="button is-info" href="#" id="viewHighScore">View High Scores</a>
+                <a class="button is-info" href="#" id="signIn">Sign In</a>            
+                <a class="button is-info" href="#" id="signUp">Sign Up</a>
             </div>
-            <div id="timer" class="navbar">
-                <span id="timeLeft" class="title is-2 is-spaced">Time:0</span>
-            </div>
-            <div id="timesUp" style="display:none;">Time's Up</div>
+
         </div>
 
 
-        <div id="everything" class="hero-body">
+        <div id="everything" class="hero-body container">
             <!-- Start Screen -->
             <div id="start">
                 <h1 class="title">Trivia Us!</h1>
-                <p>Let's test your knowledge with <u>Javascript</u> fundamentals! Answer the following questions within
-                    the time limit. Keep in mind that <b>incorrect</b> answers will deduct your time by <b>ten
-                        seconds!</b></p>
+                <p>Let's test your knowledge with our new trivia app! Answer the following questions within
+                    the time limit.
+                </p>
                 <button type="button" class="button is-primary" id="start-quiz-button">Start Quiz</button>
             </div>
 
@@ -53,23 +51,38 @@
             </div>
 
             <!-- Score Div -->
-            <div  id="summary" style="display: none;">
+            <div id="summary" style="display: none;">
                 <div></div>
                 <div></div>
-                    <h2>Your final score is <span id="finalScore"></span>!</h2>
-                    <form>
-                        <p>Enter your initials: <input id="initialInput" type="text">
+                <h2>Your final score is <span id="finalScore"></span>!</h2>
+                <form>
+                    <p>Enter your initials: <input id="initialInput" type="text">
                         <button type="submit" id="submitInitialBtn">Submit</button>
-                        </p>
-                    </form>    
+                    </p>
+                </form>
             </div>
+
+            <!-- Sign In Div -->
+            <div id="signInSection" style="display: none;">
+                <h2>Sign In</h2>
+
+                <div id="signIn"></div>
+
+                <!-- Append each highscore as a new paragraph here-->
+                <p>
+                    <button type="submit" id="submitSignIn">Submit</button>
+                    <button type="submit" id="clearHighScoreBtn">Cancel</button>
+                </p>
+            </div>
+
+
 
 
         </div>
 
     </section>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
