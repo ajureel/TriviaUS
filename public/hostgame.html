@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Us! | Host</title>
+
+    <!-- links to Bulma CSS Framework and CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- navigation -->
+    <header>
+        <h1>
+            <a href="./home.html">Trivia Us!</a>
+        </h1>
+        <nav>
+            <!-- logout link-->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="./login.html" id="logout">Logout</a></li>
+                    <li><a href="#" id="menu">Menu</a></li>
+                </ul>
+            </div>
+
+
+        </nav>
+    </header>
+
+
+    <section class="section has-text-centered">
+
+        <h1 class="title">Host a Game!</h1>
+
+        <div class="section has-text-centered">
+            <a href="./howitworks.html"><u>How it Works!</u></a>
+        </div>
+        
+        
+        <section>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Room Name:</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label"># of Questions:</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="(default is 10, max 20)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Time per Question:</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="(default is 1 min, max 5 min)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Number of Players:</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="(min is 1 player, max 20 per game)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field has-addons has-addons-centered">
+                <p class="control">
+                    <button class="button is-success">
+                        Create Room
+                    </button>
+                </p>
+            </div>
+        </section>
+        
+
+        <br><br>
+
+
+        <!-- footer -->
+        <footer class="footer content has-text-centered">
+            <h2>Made by JJRVN.</h2>
+            <div>
+                &copy; 2022 Trivia Us!
+            </div>
+        </footer>
+
+</body>
+
+</html>
