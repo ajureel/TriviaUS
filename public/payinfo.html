@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Us! | Payment</title>
+
+    <!-- links to Bulma CSS Framework and CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- navigation -->
+    <header>
+        <h1>
+            <a href="/">Trivia Us!</a>
+        </h1>
+        <nav>
+            <!-- sign in/sign up link-->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="#" id="login">Login</a></li>
+                    <li><a href="#" id="menu">Menu</a></li>
+                </ul>
+            </div>
+
+
+        </nav>
+    </header>
+
+
+    <section class="section">
+        <!-- Start Screen -->
+        <div id="start">
+            <h1 class="title has-text-centered">Trivia Us!</h1>
+        </div>
+
+        <br>
+
+        <div>
+            <h3 class="field has-addons has-addons-centered"><b>Payment Info</b></h3>
+            <!--Add form element-->
+            <form>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Card Number</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Name on card</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Expiration Date</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <input type="text" id="inputExpDate" placeholder="MM / YY" maxlength='7'>
+
+                            <input type="password" class="cvv" placeholder="CVV">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field has-addons has-addons-centered">
+                    <p class="control">
+                        <button class="button is-success">
+                            Submit
+                        </button>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+
+        <br><br>
+
+
+        <!-- footer -->
+        <footer class="footer content has-text-centered">
+            <h2>Made by JJRVN.</h2>
+            <div>
+                &copy; 2022 Trivia Us!
+            </div>
+        </footer>
+
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Us!</title>
+    <title>Trivia Us! | Home</title>
 
     <!-- links to Bulma CSS Framework and CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -35,7 +35,7 @@
 
     <section class="section">
         <!-- Start Screen -->
-        <div id="start">
+        <div id="start" class="has-text-centered">
             <h1 class="title">Trivia Us!</h1>
             <p>Let's test your knowledge with our new trivia app! Answer the following questions within
                 the time limit.
@@ -43,14 +43,33 @@
     
         </div>
 
-        <div>
-            <div class="section">Host a Game!</div>
-            <div class="section">How it Works</div>
+        <div class="section has-text-centered">
+            <div>Host a Game!</div>
+            <div>How it Works</div>
         </div>
+
+        <div class="has-text-centered">
+            Question of the Day
+            <div>here is where the question of the day goes</div>
+            <!-- Quiz Div -->
+            <div id="questionDiv" style="display: none;">
+                <p id="questionTitle"></p>
+                <div class="buttons are-small column">
+                    <p><button id="btn0" class="button is-primary"></button></p>
+                    <p><button id="btn1" class="button is-primary"></button></p>
+                    <p><button id="btn2" class="button is-primary"></button></p>
+                    <p><button id="btn3" class="button is-primary"></button></p>
+                    <hr id="lineBreak" style="display: none;">
+                    <p id="answerCheck" style="display: none;"></p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
 
 
          <!-- footer -->
-         <footer>
+         <footer class="footer content has-text-centered">
             <h2>Made by JJRVN.</h2>
             <div>
                 &copy; 2022 Trivia Us!
